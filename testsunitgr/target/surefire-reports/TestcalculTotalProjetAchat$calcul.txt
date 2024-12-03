@@ -1,14 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: TestcalculTotalProjetAchat$calcul
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.696 s -- in TestcalculTotalProjetAchat$calcul
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationNegative -- Time elapsed: 0.436 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation100K -- Time elapsed: 0.014 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation250K -- Time elapsed: 0 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation349K -- Time elapsed: 0.013 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation351K -- Time elapsed: 0.009 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation499K -- Time elapsed: 0.008 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation501K -- Time elapsed: 0.012 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation600K -- Time elapsed: 0.016 s
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.306 s -- in TestcalculTotalProjetAchat$calcul
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationNegative -- Time elapsed: 0.215 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation100K -- Time elapsed: 0.007 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation250K -- Time elapsed: 0.012 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation349K -- Time elapsed: 0.004 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation351K -- Time elapsed: 0.006 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation499K -- Time elapsed: 0.004 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation501K -- Time elapsed: 0.003 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation600K -- Time elapsed: 0.004 s
 TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationNULL -- Time elapsed: 0.004 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationZERO -- Time elapsed: 0.021 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationZERO -- Time elapsed: 0.003 s
