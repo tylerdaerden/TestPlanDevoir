@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+testsunitgr,devoirs.iramps.testsunitintger,Main,7,0,0,0,3,0,2,0,2,0
+testsunitgr,devoirs.iramps.testsunitintger,Projet,178,67,10,8,37,16,22,7,15,5
+testsunitgr,devoirs.iramps.testsunitintger,TestApportMinimal,3,0,0,0,1,0,1,0,1,0
+testsunitgr,devoirs.iramps.testsunitintger,Pret,105,0,0,0,27,0,15,0,15,0
+testsunitgr,devoirs.iramps.testsunitintger,TestTotalProjetAchat,3,0,0,0,1,0,1,0,1,0
+testsunitgr,devoirs.iramps.testsunitintger,ConsoleCalculs,133,0,6,0,37,0,14,0,11,0

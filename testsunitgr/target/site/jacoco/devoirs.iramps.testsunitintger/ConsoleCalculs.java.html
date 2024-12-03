@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ConsoleCalculs.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">testsunitgr</a> &gt; <a href="index.source.html" class="el_package">devoirs.iramps.testsunitintger</a> &gt; <span class="el_source">ConsoleCalculs.java</span></div><h1>ConsoleCalculs.java</h1><pre class="source lang-java linenums">package devoirs.iramps.testsunitintger;
+
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+
+<span class="nc" id="L8">public class ConsoleCalculs {</span>
+
+
+    private static int revenuCadastral;
+    private static double prixHabitation;
+    private static double fraisNotaireAchat;
+    private static double fraisTransformation; // Aka travaux de rénovation
+
+
+    public static double calculAbattement(double prixHabitation ) {
+<span class="nc bnc" id="L18" title="All 2 branches missed.">        if (prixHabitation &lt; 350_000)</span>
+<span class="nc" id="L19">            return 40_000;</span>
+<span class="nc bnc" id="L20" title="All 2 branches missed.">        if (prixHabitation &gt;= 500_000)</span>
+<span class="nc" id="L21">            return 20_000;</span>
+<span class="nc" id="L22">        return 40_000 - (20_000 * (prixHabitation - 350_000) / (500_000 - 350_000));</span>
+    }
+
+
+    public static double calculDroitEnregistrement(double revenuCadastral) {
+<span class="nc" id="L27">        float taux = 0.125f;</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        if (revenuCadastral &lt;= 745) {</span>
+<span class="nc" id="L29">            taux = 0.06f;</span>
+        }
+<span class="nc" id="L31">        double resultat = taux * (prixHabitation - calculAbattement(prixHabitation));</span>
+<span class="nc" id="L32">    return new BigDecimal(resultat)</span>
+<span class="nc" id="L33">            .setScale(2, RoundingMode.HALF_UP)</span>
+<span class="nc" id="L34">            .doubleValue();</span>
+    }
+
+    public static double calculApportMinimal() {
+<span class="nc" id="L38">        return 0.1 *</span>
+                (   prixHabitation +
+                    fraisTransformation +
+<span class="nc" id="L41">                    calculTVAFraisTransformation(fraisTransformation))+</span>
+<span class="nc" id="L42">                    calculDroitEnregistrement(revenuCadastral) +</span>
+                    fraisNotaireAchat;
+    }
+
+    public int getRevenuCadastral() {
+<span class="nc" id="L47">        return revenuCadastral;</span>
+    }
+
+    // public void setRevenuCadastral(int revenuCadastral) {
+    //     revenuCadastral = revenuCadastral;
+    // }
+
+    public double getPrixHabitation() {
+<span class="nc" id="L55">        return prixHabitation;</span>
+    }
+
+    // public void setPrixHabitation(double prixHabitation) {
+    //     prixHabitation = prixHabitation;
+    // }
+
+
+    public static double calculTVAFraisTransformation(double fraisTransformation) {
+<span class="nc" id="L64">        return 0.06 * fraisTransformation;</span>
+    }
+
+    public double getFraisTransformation() {
+<span class="nc" id="L68">        return fraisTransformation;</span>
+    }
+
+    // public void setFraisTransformation(double fraisTransformation) {
+    //     this.fraisTransformation = fraisTransformation;
+    // }
+
+    public static double calculTotalProjetAchat() {
+        //if(prixHabitation &gt;= 0 &amp;&amp; prixHabitation != null ){
+
+<span class="nc" id="L78">            return prixHabitation +</span>
+            fraisNotaireAchat +
+<span class="nc" id="L80">            calculDroitEnregistrement(revenuCadastral) +</span>
+            fraisTransformation +
+<span class="nc" id="L82">            calculTVAFraisTransformation(fraisTransformation);</span>
+        //}
+    }
+
+    public double getFraisNotaireAchat() {
+<span class="nc" id="L87">        return fraisNotaireAchat;</span>
+    }
+
+    // public void setFraisNotaireAchat(double fraisNotaireAchat) {
+    //     fraisNotaireAchat = fraisNotaireAchat;
+    // }
+
+
+
+    public static void main(String[] args) {
+
+<span class="nc" id="L98">    revenuCadastral = 800;</span>
+<span class="nc" id="L99">    prixHabitation = 500001 ; //PH</span>
+<span class="nc" id="L100">    fraisNotaireAchat = 11000; //N</span>
+<span class="nc" id="L101">    fraisTransformation = 210000; //FT</span>
+<span class="nc" id="L102">    System.out.println(&quot;\n&quot;);</span>
+<span class="nc" id="L103">    System.out.println(&quot;Revenu Cadastral : &quot; + revenuCadastral);</span>
+<span class="nc" id="L104">    System.out.print(&quot;PrixHabitation - PH : &quot; + prixHabitation + &quot;\n&quot;);</span>
+<span class="nc" id="L105">    System.out.println(&quot;Frais Fransformations - FT : &quot; + fraisTransformation );</span>
+<span class="nc" id="L106">    System.out.println(&quot;TVA des Frais Transformation - CT : &quot; + calculTVAFraisTransformation(fraisTransformation) );</span>
+<span class="nc" id="L107">    System.out.println(&quot;Calcul Droits Enregistrement - CD : &quot; + calculDroitEnregistrement(revenuCadastral));</span>
+<span class="nc" id="L108">    System.out.println(&quot;FraisNotaireAchat - N : &quot; +fraisNotaireAchat +&quot;\n&quot;);</span>
+
+    //System.out.println(&quot;Total Projet Achat : &quot; +calculTotalProjetAchat()+&quot;\n&quot;);
+<span class="nc" id="L111">    System.out.println(&quot;CalculApportMinimal : &quot; + calculApportMinimal()+&quot;\n&quot; );</span>
+        
+
+
+
+
+
+<span class="nc" id="L118">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
