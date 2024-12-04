@@ -32,13 +32,23 @@
      * @return doube apport minimal
      */
     public Double calculApportMinimal() {
-<span class="nc" id="L35">        return 0.1 *</span>
-<span class="nc" id="L36">                (this.prixHabitation +</span>
-<span class="nc" id="L37">                        this.fraisTransformation +</span>
-<span class="nc" id="L38">                        this.calculTVAFraisTransformation())</span>
+<span class="pc bpc" id="L35" title="5 of 10 branches missed.">        if(prixHabitation == null || fraisNotaireAchat == null || calculDroitEnregistrement() == null || fraisTransformation == null || calculTVAFraisTransformation() == null )</span>
+        {
+<span class="nc" id="L37">            throw new IllegalStateException(&quot;Cannot proceed with null datas&quot;);</span>
+        }
+
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        else if(prixHabitation &lt;= 0.00)</span>
+        {
+<span class="nc" id="L42">            throw new IllegalStateException(&quot;HousePrice can't be set to 0 or be negative&quot;);</span>
+        }
+        else
+<span class="fc" id="L45">        return 0.10d *</span>
+<span class="fc" id="L46">                (this.prixHabitation +</span>
+<span class="fc" id="L47">                        this.fraisTransformation +</span>
+<span class="fc" id="L48">                        this.calculTVAFraisTransformation())</span>
                 +
-<span class="nc" id="L40">                this.calculDroitEnregistrement() +</span>
-<span class="nc" id="L41">                this.fraisNotaireAchat;</span>
+<span class="fc" id="L50">                this.calculDroitEnregistrement() +</span>
+<span class="fc" id="L51">                this.fraisNotaireAchat;</span>
     }
 
     /**
@@ -47,21 +57,21 @@
      * @return double total
      */
     public Double calculTotalProjetAchat() {
-<span class="pc bpc" id="L50" title="4 of 10 branches missed.">        if(prixHabitation == null || fraisNotaireAchat == null || calculDroitEnregistrement() == null || fraisTransformation == null || calculTVAFraisTransformation() == null )</span>
+<span class="pc bpc" id="L60" title="4 of 10 branches missed.">        if(prixHabitation == null || fraisNotaireAchat == null || calculDroitEnregistrement() == null || fraisTransformation == null || calculTVAFraisTransformation() == null )</span>
         {
-<span class="fc" id="L52">            throw new IllegalStateException(&quot;Cannot proceed with null datas&quot;);</span>
+<span class="fc" id="L62">            throw new IllegalStateException(&quot;Cannot proceed with null datas&quot;);</span>
         }
 
-<span class="fc bfc" id="L55" title="All 2 branches covered.">        else if(prixHabitation &lt;= 0.00)</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        else if(prixHabitation &lt;= 0.00)</span>
         {
-<span class="fc" id="L57">            throw new IllegalStateException(&quot;HousePrice can't be set to 0 or be negative&quot;);</span>
+<span class="fc" id="L67">            throw new IllegalStateException(&quot;HousePrice can't be set to 0 or be negative&quot;);</span>
         }
         else
-<span class="fc" id="L60">        return this.prixHabitation +</span>
-<span class="fc" id="L61">                this.fraisNotaireAchat +</span>
-<span class="fc" id="L62">                this.calculDroitEnregistrement() +</span>
-<span class="fc" id="L63">                this.fraisTransformation +</span>
-<span class="fc" id="L64">                this.calculTVAFraisTransformation();</span>
+<span class="fc" id="L70">        return this.prixHabitation +</span>
+<span class="fc" id="L71">                this.fraisNotaireAchat +</span>
+<span class="fc" id="L72">                this.calculDroitEnregistrement() +</span>
+<span class="fc" id="L73">                this.fraisTransformation +</span>
+<span class="fc" id="L74">                this.calculTVAFraisTransformation();</span>
     }
 
     /**
@@ -70,11 +80,11 @@
      * @return double droit d'enregistrement
      */
     public Double calculDroitEnregistrement() {
-<span class="nc" id="L73">        float taux = 0.125f;</span>
-<span class="nc bnc" id="L74" title="All 2 branches missed.">        if (this.revenuCadastral &lt;= 745) {</span>
-<span class="nc" id="L75">            taux = 0.06f;</span>
+<span class="nc" id="L83">        float taux = 0.125f;</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">        if (this.revenuCadastral &lt;= 745) {</span>
+<span class="nc" id="L85">            taux = 0.06f;</span>
         }
-<span class="nc" id="L77">        return (double) taux * (this.prixHabitation - this.calculAbattement());</span>
+<span class="nc" id="L87">        return (double) taux * (this.prixHabitation - this.calculAbattement());</span>
     }
 
     
@@ -84,10 +94,10 @@
      * @return montantTotal
      */
     public Double calculTotalProjet(double montantEmprunt){
-<span class="nc" id="L87">        return montantEmprunt +</span>
-<span class="nc" id="L88">                this.fraisDossierBancaire +</span>
-<span class="nc" id="L89">                this.fraisNotaireCredit +</span>
-<span class="nc" id="L90">                this.calculTotalInterets(montantEmprunt);</span>
+<span class="nc" id="L97">        return montantEmprunt +</span>
+<span class="nc" id="L98">                this.fraisDossierBancaire +</span>
+<span class="nc" id="L99">                this.fraisNotaireCredit +</span>
+<span class="nc" id="L100">                this.calculTotalInterets(montantEmprunt);</span>
     }
 
     /**
@@ -96,11 +106,11 @@
      * @return double abattement
      */
     public Double calculAbattement() {
-<span class="nc bnc" id="L99" title="All 2 branches missed.">        if (this.prixHabitation &lt; 350_000)</span>
-<span class="nc" id="L100">            return 40000.00;</span>
-<span class="nc bnc" id="L101" title="All 2 branches missed.">        if (this.prixHabitation &gt;= 500_000)</span>
-<span class="nc" id="L102">            return 20000.00;</span>
-<span class="nc" id="L103">        return 40000 - (20000 * (this.prixHabitation - 350000) / (500000 - 350000));</span>
+<span class="nc bnc" id="L109" title="All 2 branches missed.">        if (this.prixHabitation &lt; 350_000)</span>
+<span class="nc" id="L110">            return 40000.00;</span>
+<span class="nc bnc" id="L111" title="All 2 branches missed.">        if (this.prixHabitation &gt;= 500_000)</span>
+<span class="nc" id="L112">            return 20000.00;</span>
+<span class="nc" id="L113">        return 40000 - (20000 * (this.prixHabitation - 350000) / (500000 - 350000));</span>
     }
 
         /**
@@ -108,9 +118,9 @@
      * @return montantInterets
      */
     public Double calculTotalInterets(double montantEmprunt){
-<span class="nc" id="L111">        return this.calculMensualites(montantEmprunt) *</span>
-<span class="nc" id="L112">                this.getMensualites() -</span>
-                montantEmprunt;
+<span class="nc" id="L121">        return this.calculMensualites(montantEmprunt) *</span>
+<span class="nc" id="L122">                this.getMensualites() -</span>
+<span class="nc" id="L123">                montantEmprunt;</span>
     }
 
         /**
@@ -120,14 +130,14 @@
      * @return double montantMensualite
      */
     public Double calculMensualites(double montantEmprunt){
-<span class="nc" id="L123">        double tauxPeriodique = this.calculTauxPeriodique();</span>
-<span class="nc" id="L124">        int mensualites = this.getMensualites();</span>
-<span class="nc" id="L125">        return (montantEmprunt * </span>
-                tauxPeriodique *
-<span class="nc" id="L127">                Math.pow(1 + tauxPeriodique , mensualites)</span>
-            ) / (
-<span class="nc" id="L129">                Math.pow(1 + tauxPeriodique, mensualites) -</span>
-                1
+<span class="nc" id="L133">        double tauxPeriodique = this.calculTauxPeriodique();</span>
+<span class="nc" id="L134">        int mensualites = this.getMensualites();</span>
+<span class="nc" id="L135">        return (montantEmprunt * </span>
+<span class="nc" id="L136">                tauxPeriodique *</span>
+<span class="nc" id="L137">                Math.pow(1 + tauxPeriodique , mensualites)</span>
+<span class="nc" id="L138">            ) / (</span>
+<span class="nc" id="L139">                Math.pow(1 + tauxPeriodique, mensualites) -</span>
+<span class="nc" id="L140">                1</span>
             );
     }
 
@@ -136,7 +146,7 @@
      * @return double tauxPeriodique
      */
     private Double calculTauxPeriodique(){
-<span class="nc" id="L139">        return  Math.pow((1 + this.tauxAnnuel), (1.0f / 12.0f)) -1;</span>
+<span class="nc" id="L149">        return  Math.pow((1 + this.tauxAnnuel), (1.0f / 12.0f)) -1;</span>
     }
 
 
@@ -145,7 +155,7 @@
      * @return int mensualite
      */
     private int getMensualites(){
-<span class="nc" id="L148">        return nombreAnnees * 12;</span>
+<span class="nc" id="L158">        return nombreAnnees * 12;</span>
     }
 
     /**
@@ -154,40 +164,40 @@
      * @return doube TVA
      */
     public Double calculTVAFraisTransformation() {
-<span class="nc" id="L157">        return 0.06 * this.fraisTransformation;</span>
+<span class="nc" id="L167">        return 0.06 * this.fraisTransformation;</span>
     }
 
     public int getRevenuCadastral() {
-<span class="nc" id="L161">        return revenuCadastral;</span>
+<span class="nc" id="L171">        return revenuCadastral;</span>
     }
 
     public void setRevenuCadastral(int revenuCadastral) {
-<span class="nc" id="L165">        this.revenuCadastral = revenuCadastral;</span>
-<span class="nc" id="L166">    }</span>
+<span class="nc" id="L175">        this.revenuCadastral = revenuCadastral;</span>
+<span class="nc" id="L176">    }</span>
 
     public Double getPrixHabitation() {
-<span class="nc" id="L169">        return prixHabitation;</span>
+<span class="nc" id="L179">        return prixHabitation;</span>
     }
 
     public void setPrixHabitation(Double prixHabitation) {
-<span class="fc" id="L173">        this.prixHabitation = prixHabitation;</span>
-<span class="fc" id="L174">    }</span>
+<span class="fc" id="L183">        this.prixHabitation = prixHabitation;</span>
+<span class="fc" id="L184">    }</span>
 
     public Double getFraisNotaireAchat() {
-<span class="nc" id="L177">        return fraisNotaireAchat;</span>
+<span class="nc" id="L187">        return fraisNotaireAchat;</span>
     }
 
     public void setFraisNotaireAchat(Double fraisNotaireAchat) {
-<span class="fc" id="L181">        this.fraisNotaireAchat = fraisNotaireAchat;</span>
-<span class="fc" id="L182">    }</span>
+<span class="fc" id="L191">        this.fraisNotaireAchat = fraisNotaireAchat;</span>
+<span class="fc" id="L192">    }</span>
 
     public Double getFraisTransformation() {
-<span class="nc" id="L185">        return fraisTransformation;</span>
+<span class="nc" id="L195">        return fraisTransformation;</span>
     }
 
     public void setFraisTransformation(Double fraisTransformation) {
-<span class="fc" id="L189">        this.fraisTransformation = fraisTransformation;</span>
-<span class="fc" id="L190">    }</span>
+<span class="fc" id="L199">        this.fraisTransformation = fraisTransformation;</span>
+<span class="fc" id="L200">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

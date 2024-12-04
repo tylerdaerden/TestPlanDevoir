@@ -1,14 +1,55 @@
 -------------------------------------------------------------------------------
 Test set: TestcalculTotalProjetAchat$calcul
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.525 s -- in TestcalculTotalProjetAchat$calcul
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationNegative -- Time elapsed: 0.321 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation100K -- Time elapsed: 0.013 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation250K -- Time elapsed: 0.012 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation349K -- Time elapsed: 0.010 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation351K -- Time elapsed: 0.013 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation499K -- Time elapsed: 0.009 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation501K -- Time elapsed: 0.008 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation600K -- Time elapsed: 0.008 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationNULL -- Time elapsed: 0.024 s
-TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationZERO -- Time elapsed: 0.019 s
+Tests run: 20, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.306 s <<< FAILURE! -- in TestcalculTotalProjetAchat$calcul
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitationNEGATIVE -- Time elapsed: 0.172 s
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitationZEROK -- Time elapsed: 0.006 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationNegative -- Time elapsed: 0.005 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation100K -- Time elapsed: 0.007 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation250K -- Time elapsed: 0.003 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation349K -- Time elapsed: 0.004 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation351K -- Time elapsed: 0.002 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation499K -- Time elapsed: 0.003 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation501K -- Time elapsed: 0.003 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitation600K -- Time elapsed: 0.003 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationNULL -- Time elapsed: 0.003 s
+TestcalculTotalProjetAchat$calcul.calculTotalProjetAchatHabitationZERO -- Time elapsed: 0.004 s
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitation100K -- Time elapsed: 0.002 s
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitation250K -- Time elapsed: 0.002 s
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitation349K -- Time elapsed: 0.003 s
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitation351K -- Time elapsed: 0.018 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+Multiple Failures (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <83650.23> but was: <83650.23999999999>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2940)
+	at TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitation351K(TestcalculTotalProjetAchat.java:239)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <83650.23> but was: <83650.23999999999>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:894)
+		at TestcalculTotalProjetAchat$calcul.lambda$calculApportMinimalHabitation351K$14(TestcalculTotalProjetAchat.java:245)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 8 more
+
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitation499K -- Time elapsed: 0.004 s
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitation501K -- Time elapsed: 0.003 s
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitation600K -- Time elapsed: 0.002 s
+TestcalculTotalProjetAchat$calcul.calculApportMinimalHabitationNULL -- Time elapsed: 0.003 s

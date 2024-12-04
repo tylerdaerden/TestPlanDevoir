@@ -7,7 +7,7 @@ import devoirs.iramps.testsunitintger.Pret;
 
 @DisplayName("TestIntegration pour TotalProjetAchat")
 
-public class ItAppProjetAchat {
+public class ItAppClasseProjet {
 
 @Test
 @DisplayName("Validation Meilleur Scenario")

@@ -32,7 +32,17 @@ public class Projet {
      * @return doube apport minimal
      */
     public Double calculApportMinimal() {
-        return 0.1 *
+        if(prixHabitation == null || fraisNotaireAchat == null || calculDroitEnregistrement() == null || fraisTransformation == null || calculTVAFraisTransformation() == null )
+        {
+            throw new IllegalStateException("Cannot proceed with null datas");
+        }
+
+        else if(prixHabitation <= 0.00)
+        {
+            throw new IllegalStateException("HousePrice can't be set to 0 or be negative");
+        }
+        else
+        return 0.10d *
                 (this.prixHabitation +
                         this.fraisTransformation +
                         this.calculTVAFraisTransformation())

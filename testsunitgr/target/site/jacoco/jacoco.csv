@@ -1,4 +1,4 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 testsunitgr,devoirs.iramps.testsunitintger,Main,7,0,0,0,3,0,2,0,2,0
-testsunitgr,devoirs.iramps.testsunitintger,Projet,178,67,10,8,37,16,22,7,15,5
-testsunitgr,devoirs.iramps.testsunitintger,Pret,105,0,0,0,27,0,15,0,15,0
+testsunitgr,devoirs.iramps.testsunitintger,Projet,165,111,16,14,37,24,27,8,14,6
+testsunitgr,devoirs.iramps.testsunitintger,Pret,105,0,0,0,33,0,15,0,15,0

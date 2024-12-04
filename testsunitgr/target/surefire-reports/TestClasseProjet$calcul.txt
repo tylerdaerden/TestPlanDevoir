@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: TestClasseProjet$calcul
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.265 s -- in TestClasseProjet$calcul
+TestClasseProjet$calcul.calculApportMinimalHabitationNEGATIVE -- Time elapsed: 0.167 s
+TestClasseProjet$calcul.calculApportMinimalHabitationZEROK -- Time elapsed: 0.005 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitationNegative -- Time elapsed: 0.004 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitation100K -- Time elapsed: 0.006 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitation250K -- Time elapsed: 0.004 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitation349K -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitation351K -- Time elapsed: 0.002 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitation499K -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitation501K -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitation600K -- Time elapsed: 0.002 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitationNULL -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculTotalProjetAchatHabitationZERO -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculApportMinimalHabitation100K -- Time elapsed: 0.002 s
+TestClasseProjet$calcul.calculApportMinimalHabitation250K -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculApportMinimalHabitation349K -- Time elapsed: 0.002 s
+TestClasseProjet$calcul.calculApportMinimalHabitation351K -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculApportMinimalHabitation499K -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculApportMinimalHabitation501K -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculApportMinimalHabitation600K -- Time elapsed: 0.003 s
+TestClasseProjet$calcul.calculApportMinimalHabitationNULL -- Time elapsed: 0.003 s
